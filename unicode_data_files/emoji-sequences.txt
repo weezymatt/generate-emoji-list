@@ -540,7 +540,7 @@
 
 # Emoji_Keycap_Sequence
 
-0023 FE0F 20E3; Emoji_Keycap_Sequence        ; keycap: \x{23}                                                 # E0.6   [1] (<KEYCAP_HASH>)
+0023 FE0F 20E3; Emoji_Keycap_Sequence        ; keycap: \x{23}                                                 # E0.6   [1] (#️⃣)
 002A FE0F 20E3; Emoji_Keycap_Sequence        ; keycap: *                                                      # E2.0   [1] (*️⃣)
 0030 FE0F 20E3; Emoji_Keycap_Sequence        ; keycap: 0                                                      # E0.6   [1] (0️⃣)
 0031 FE0F 20E3; Emoji_Keycap_Sequence        ; keycap: 1                                                      # E0.6   [1] (1️⃣)
