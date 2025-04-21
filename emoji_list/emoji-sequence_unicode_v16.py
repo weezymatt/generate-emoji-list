@@ -648,6 +648,7 @@
     "\ud83d\udee9\ufe0f": " small airplane",
     "\ud83d\udef0\ufe0f": " satellite",
     "\ud83d\udef3\ufe0f": " passenger ship",
+    "#\ufe0f\u20e3": " keycap: \\x{23}",
     "*\ufe0f\u20e3": " keycap: *",
     "0\ufe0f\u20e3": " keycap: 0",
     "1\ufe0f\u20e3": " keycap: 1",
@@ -1575,6 +1576,5 @@
     "\ud83e\udef8\ud83c\udffc": " rightwards pushing hand: medium-light skin tone",
     "\ud83e\udef8\ud83c\udffd": " rightwards pushing hand: medium skin tone",
     "\ud83e\udef8\ud83c\udffe": " rightwards pushing hand: medium-dark skin tone",
-    "\ud83e\udef8\ud83c\udfff": " rightwards pushing hand: dark skin tone",
-    "#\ufe0f\u20e3": " keycap: \\x{23}"
+    "\ud83e\udef8\ud83c\udfff": " rightwards pushing hand: dark skin tone"
 }

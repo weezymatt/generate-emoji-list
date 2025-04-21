@@ -11,27 +11,10 @@ There are two main functions:
 import json
 import re
 from typing import NoReturn
+import pdb
 
-def preprocess(workfile: str) -> NoReturn:
-    """
-    Simple preprocess function that handle mishaps in the text file.
 
-    Args:
-        workfile (str): Path for emoji file with mishap.
-    """
-    patterns = {'(#️⃣)': '(<KEYCAP_HASH>)'}
-
-    with open(workfile, 'r', encoding='utf-8') as f:
-        text = f.read()
-
-        for pattern in patterns.items():
-            if pattern[0] in text:
-                text = text.replace(pattern[0], pattern[1])
-
-    with open(workfile, 'w+', encoding='utf-8') as f:
-        f.write(text)
-
-def read_emoji_sequences(workfile: str) -> dict[str, str]:
+def read_emoji_sequences(workfile: str, type='sequence') -> dict[str, str]:
     """
     Reads a text file and returns its contents as a dictionary.
 
@@ -52,17 +35,22 @@ def read_emoji_sequences(workfile: str) -> dict[str, str]:
             if line.startswith(('#', '\n')):
                 continue
 
-            segments = line.rsplit(";", 1)[1].split("#") #fixed for spec2
+            segments = line.rsplit(";", 1)[1].split("#", maxsplit=1)
 
-            descriptions = segments[0].split("..")
-
-            emojis = emoji_pattern(segments[-1])[0].split('..')
+            if workfile.endswith('test.txt'):
+                try:
+                    #TODO: ignore unqualified sequences 
+                    emojis, _, descriptions = segments[-1].split(maxsplit=2)
+                    descriptions = [descriptions]
+                    emojis = [emojis]
+                except:
+                    print(f'Error with segments {segments}.')
+            else:
+                descriptions = segments[0].split("..")
+                emojis = emoji_pattern(segments[-1])[0].split('..')
 
             for emoji, description in zip(emojis, descriptions):
                 emoji_dictionary[emoji.strip()] = " " + description.strip()
-
-    if "<KEYCAP_HASH>" in emoji_dictionary:
-        emoji_dictionary['#️⃣'] = emoji_dictionary.pop("<KEYCAP_HASH>")
 
     return emoji_dictionary
 

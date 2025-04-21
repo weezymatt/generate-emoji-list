@@ -648,6 +648,7 @@
     "🛩️": " small airplane",
     "🛰️": " satellite",
     "🛳️": " passenger ship",
+    "#️⃣": " keycap: \\x{23}",
     "*️⃣": " keycap: *",
     "0️⃣": " keycap: 0",
     "1️⃣": " keycap: 1",
@@ -1575,6 +1576,5 @@
     "🫸🏼": " rightwards pushing hand: medium-light skin tone",
     "🫸🏽": " rightwards pushing hand: medium skin tone",
     "🫸🏾": " rightwards pushing hand: medium-dark skin tone",
-    "🫸🏿": " rightwards pushing hand: dark skin tone",
-    "#️⃣": " keycap: \\x{23}"
+    "🫸🏿": " rightwards pushing hand: dark skin tone"
 }

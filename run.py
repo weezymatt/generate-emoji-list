@@ -23,7 +23,7 @@ def extract_emojis(parsed_args):
     """
     Main function to extract emojis.
     """
-    if parsed_args.preprocess:
+    if parsed_args.preprocess == 'yes':
         emojis.preprocess(parsed_args.file)
 
     if parsed_args.file and parsed_args.save_path and parsed_args.render_unicode:
